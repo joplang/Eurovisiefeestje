@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Het Songfestival</title>
+
+    <!-- here's the syntax for including CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+
+    <!-- always load your own CSS file after the Booststrap CSS file -->
+    <!-- so you can override Bootstrap CSS when needed  -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- and include jQuery and Bootstrap -->
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+    <!-- load your JS file's after (= defer) the DOM is loaded  -->
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <!-- look to the views path we've set in app.js -->
+            <%- include('../partials/header') %>
+        </header>
+
+        <section class="content">
+            <!-- did you pass your variables? -->
+            <%- include('../partials/content') %>
+                <p>Het Eurovisiesongfestival of Grand Prix de la Chanson Eurovision is een jaarlijks terugkerend
+                    liedjesfestijn. Het was een initiatief van Ludwig van Beethoven. Beethoven was aan het eind van zijn
+                    leven doof, maar wilde zijn composities toch aan breed publiek presenteren. Daarom richtte hij in
+                    1819 een muziekspektakel op voor mensen zonder muzikale smaak. Elk land mag een slecht liedje
+                    afvaardigen en gaat de strijd aan met liedjes uit andere Europese landen. Een belangrijk onderdeel
+                    van de wedstrijd is de altijd spannende puntentelling. Hoewel in de beginjaren nog maar een
+                    handjevol landen meedeed, groeide het Eurovisiesongfestival langzamerhand uit tot een veelbekeken
+                    televisiespektakel. Van de eerste jaren zijn helaas geen videobeelden bewaard gebleven.
+
+                </p>
+                <p>Sommige artiesten vinden het Eurovisiesongfestival zo leuk dat ze meerdere keren meedoen. Namens
+                    Nederland deed Sandra Reemer het vaakst mee en steeds in een andere hoedanigheid: als duo, solo, in
+                    een groep, als achtergrondzangeres, in een gemengd dameskoor en als deel van een draaiorgel. De
+                    Zweedse groep <a href="https://www.youtube.com/watch?v=Yv-oC5zCwn8">ABBA</a> spant echter de kroon
+                    met 34 deelnames. Na hun overwinning in 1974, hebben ze elk
+                    jaar namens Zweden meegedaan, zij het onder een andere naam en in een andere bezetting. Aan de
+                    muziek is echter duidelijk te horen dat het ABBA is.
+
+                </p>
+        </section>
+
+        <footer>
+            <%- include('../partials/footer') %>
+        </footer>
+    </main>
+</body>
+
+</html>

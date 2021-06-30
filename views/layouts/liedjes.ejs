@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liedjes</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <%- include('../partials/header') %>
+        </header>
+
+        <section class="content">
+            <%- include('../partials/content') %>
+                <ul>
+                    <% for(let lied of liedjes) { %>
+                        <li>
+                            <b>
+                                <a href="/liedjes/<%=lied._id%>">
+                                    <%= lied.naam %>
+                                </a>
+                            </b>
+                        </li>
+                        <li>
+                            <%= lied.jaar %>
+                        </li>
+                        <li>
+                            <%= lied.land %>
+                        </li>
+                        <br>
+                        <% }%>
+
+                </ul>
+
+        </section>
+
+        <footer>
+            <%- include('../partials/footer') %>
+        </footer>
+    </main>
+
+
+</body>
+
+</html>

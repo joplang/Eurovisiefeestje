@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Het Songfestival</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <%- include('../partials/header') %>
+        </header>
+
+        <section class="content">
+            <%- include('../partials/content') %>
+                <h2>Wat is jouw favoriet?</h2>
+                <form action="/liedjes" method="POST">
+                    <label for="naam">Hoe heet uw liedje?</label>
+                    <input type="text" id="naam" name="naam">
+                    <br>
+                    <label for="land">Waar komt het weg?</label>
+                    <input type="text" id="land" name="land">
+                    <br>
+                    <label for="jaar">Welk jaar was het?</label>
+                    <input type="number" id="jaar" name="jaar">
+                    <br>
+                    <button>Inzenden!</button>
+                </form>
+        </section>
+
+        <footer>
+            <%- include('../partials/footer') %>
+        </footer>
+    </main>
+</body>
+
+</html>

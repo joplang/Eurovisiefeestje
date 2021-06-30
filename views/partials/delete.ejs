@@ -1,0 +1,16 @@
+<div class="container-fluid" id="verwijder">
+    <h1>
+        <a href="https://www.youtube.com/results?search_query=<%= lied.naam %><%= lied.land %>">
+            <%= lied.naam %>!
+        </a>
+    </h1>
+
+    <img src="https://picsum.photos/350/450" alt="">
+    <p>
+    <form action="/liedjes/<%=lied._id%>?_method=DELETE" method="POST">
+        <button>Verwijderen!</button>
+    </form>
+    </p>
+
+
+</div>
